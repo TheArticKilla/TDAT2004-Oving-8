@@ -22,7 +22,7 @@ jobs:
     - name: Check out code into the Go module directory
       uses: actions/checkout@v2
 
-    - name: Add remote origin heroku
+    - name: Add remote origin heroku h
       run: |
         git init
         git add -A
