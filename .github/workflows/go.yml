@@ -26,8 +26,8 @@ jobs:
       run: |
         git init
         git remote add heroku https://heroku:${{ secrets.HEROKU_API_KEY }}@git.heroku.com/${{ secrets.HEROKU_APP_NAME }}.git
-        git fetch heroku master
    
     - name: Deploy to Heroku
       run: |
+        git fetch && git checkout heroku master
         git push heroku master
