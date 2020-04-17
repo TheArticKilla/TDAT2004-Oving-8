@@ -31,5 +31,5 @@ jobs:
       run: |
         git add .
         git commit -m "something"
-        git fetch heroku && git pull heroku master
+        git fetch heroku && git pull heroku master --allow-unrelated-histories
         git push heroku master
