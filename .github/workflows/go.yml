@@ -29,5 +29,5 @@ jobs:
    
     - name: Deploy to Heroku
       run: |
-        git fetch && git checkout heroku master
+        git fetch heroku && git checkout heroku master
         git push heroku master
