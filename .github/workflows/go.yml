@@ -22,14 +22,12 @@ jobs:
     - name: Check out code into the Go module directory
       uses: actions/checkout@v2
 
-    - name: Add remote origin heroku h
+    - name: Add remote origin heroku 
       run: |
         git init
-        git add -A
-        git commit
         git remote add heroku https://heroku:${{ secrets.HEROKU_API_KEY }}@git.heroku.com/${{ secrets.HEROKU_APP_NAME }}.git
+        git pull heroku master
    
     - name: Deploy to Heroku
       run: |
-        git pull heroku master
         git push heroku master
