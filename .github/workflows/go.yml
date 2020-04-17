@@ -31,4 +31,5 @@ jobs:
       run: |
         git add .
         git commit -m "something"
-        git fetch heroku && git push heroku master
+        git fetch heroku && git pull heroku master
+        git push heroku master
